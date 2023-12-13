@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="style.css?v1">
+	<script
+	src="https://code.jquery.com/jquery-3.7.0.min.js"
+	integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+	crossorigin="anonymous"></script>
+	<script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<title>Weather</title>
+</head>
+<body style="background: white;">
+	<div style="opacity: 0;" class="bg_div">
+		<div class="fill">
+			<div class="center">
+				<div onclick="{window.location.search = ''}" class="text header_text">
+					<a>Weather</a>
+				</div>
+				<div class="alert"></div>
+				<div class="up_group">
+					<div class="search_bar_div">
+						<input oninput="Check()" tabindex="-1" placeholder="Search" autocomplete="off" onfocusin="HideDiv()" onfocusout="" class="search_bar text" id="finder" type="text" name="search">
+						<div class="finder_bar_list">
+							<div class="finder_bar_row_items">
+								<div class="finder_bar_items show">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="alert" onclick="ShowDiv()"></div>
+				<div id="main" class="main-weather flex-down-div-weather text">
+					<div class="main-weather-left">
+						<div class="main-weather-left-name"></div>
+						<div class="text live" id="live_mobile">Live</div>
+						<div class="main-weather-left-group">
+							<div class="main-weather-left-up">
+								<div class="main-weather-left-up-header"><img class="main-weather-logo" src="" /> </div>
+								<div class="main-weather-left-up-description"> </div>
+							</div>
+							<div class="main-weather-left-down">
+								<div class="main-weather-left-down-sub">
+									<div class="main-weather-left-down-sub-header">Max</div>
+									<div class="main-weather-left-down-sub-value"> </div>		
+								</div>
+								<div class="main-weather-left-down-sub">
+									<div class="main-weather-left-down-sub-header">Min</div>
+									<div class="main-weather-left-down-sub-value"> </div>		
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="stick"></div>
+					<div class="main-weather-right">
+						<div class="text live" id="live">Live</div>
+						<div class="text auto-slider" onclick="AutoSlide()" id="auto">Auto Slide</div>
+						<div class="main-weather-body" id="item_block">
+						</div>
+					</div>
+					<div class="text marka mobile no-sel" onclick="{window.open('https://www.accuweather.com', '_blank')}">Powered by <img  class="logo-power" src="img/logo.svg"></div>
+					<div class="main-weather-item-selectors">
+					</div>
+				</div>
+				<div class="text marka pc no-sel" onclick="{window.open('https://www.accuweather.com', '_blank')}">Powered by <img  class="logo-power" src="img/logo.svg"></div>
+			</div>
+		</div>
+	</body>
+	</html>
